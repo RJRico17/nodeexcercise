@@ -1,12 +1,11 @@
 // 3. Remove duplicates from an array (using a loop). FYI: array.includes(element) checks if an element is in an array
 function removeDuplicates(array) {
-    for (let i = 0; i < array.length; i++)
-    {
-        lastElement = array[array.length - 1];
-        {
-            if (array[i] == lastElement)
-            {
-                array.pop();
+    for (let i = 0; i < array.length; i++) {
+        for (let k = 1; k < array.length; k++) {
+            if (array[i] == array[k]) {
+                array.splice(k,1);
+            }
+            else {
             }
         }
     }
