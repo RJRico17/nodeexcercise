@@ -12,17 +12,26 @@ function checkPalindrome(textInput) {
             console.log("PALINDROME!");
         }
     }*/
-   for (let i=0; i<textInput.length; i++) // i is 0. while i is less than racecar.length (so 7) i++
+
+
+    let match = 0;
+
+   for (let i=0; i<textInput.length; i++)
    {
-        if (textInput.charAt(i) == textInput.charAt(textInput.length)) // if (0; r) is NOT EQUAL to (7)
+        if (textInput.charAt(i) == textInput.charAt(textInput.length))
         {
-            console.log(textInput + ": PALINDROME");
+            match++;
+            //console.log(textInput + ": PALINDROME");
+        }
+
+        if (match == textInput.length/2)
+        {
             console.log(true);
         }
         else
         {
-            console.log(textInput + ": NOT-PALINDROME");
             console.log(false);
+            break;
         }
    }
 }
